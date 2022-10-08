@@ -1,9 +1,12 @@
 package models
 
+import "gorm.io/gorm"
+
 type Aluno struct {
-	Nome string `json:"nome"`
-	CPF  string `json:"cpf"`
-	RG   string `json:"rg"`
+	gorm.Model        //insere ID, hora de criação, update e delete.
+	Nome       string `json:"nome"`
+	CPF        string `json:"cpf"`
+	RG         string `json:"rg"`
 }
 
 var Alunos []Aluno
